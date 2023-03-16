@@ -10,14 +10,12 @@ Linux terminal (GitBash) commands
 7) Создать 3 папки – mkdir one two three
 8. Вывести список содержимого папки – ls -la
 9) + Открыть любой txt файл – cat >> three.txt
-10) + написать туда что-нибудь, любой текст – ctrl + c
-12) Выйти из папки на уровень выше – cd  ../
-—grep
+10) + написать туда что-нибудь, любой текст – текст + enter + ctrl c
+12) Выйти из папки на уровень выше – cd  ..
 13) переместить любые 2 файла, которые вы создали, в любую другую папку – mv one.json ../2/one.json
 14) скопировать любые 2 файла, которые вы создали, в любую другую папку – mv two.json ../2/two.json
-15) Найти файл по имени – find / -iname “two.json”
-16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает - grep -e "bash" -e "bee" three.txt
-
+15) Найти файл по имени – find . -name “two.json”
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает - grep "hehehe" three.txt
 17) вывести несколько первых строк из текстового файла – head three.txt
 18) вывести несколько последних строк из текстового файла – tail three.txt
 19) просмотреть содержимое длинного файла (команда less) изучите как она работает. – less three.txt
@@ -27,11 +25,11 @@ Linux terminal (GitBash) commands
 Задание *
 1) Отправить http запрос на сервер.
 http://162.55.220.72:5005/terminal-hw-request
-curl -i -X OPTIONS http://162.55.220.72:5005/terminal-hw-request
+curl -L http://162.55.220.72:5005/terminal-hw-request
 2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
 touch bashScript.sh
 cat > bashScript.sh
-!to add following commands:
+!to add the following commands:
 cd folder
 mkdir 1 2 3
 cd 1
@@ -40,7 +38,7 @@ mkdir one two three
 ls -la
 mv one.json ../2/one.json
 !
-to press ctrl + d to save
+to press ctrl + c to save
 #!/bin/bash
 bash bashScript.sh
 =====================
